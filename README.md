@@ -1,10 +1,10 @@
-# Stock Price Prediction with LSTM
+u# Stock Price Prediction with LSTM
 
 This project uses historical stock data to predict the next day’s closing price of a stock using an LSTM (Long Short-Term Memory) neural network in PyTorch. I completed this project in September 2025, implementing a full pipeline for feature engineering, sequence creation, model training, evaluation, and visualization.
 
 ## Project Overview
 
-The goal is to predict the next day’s closing price of a stock using past stock prices and engineered features. The model uses a sliding window of past 30 days to forecast the next closing price. Additional features beyond the raw closing price, such as returns, moving averages, volatility, momentum, and volume, are included to improve predictive performance.
+The goal is to predict the next day’s closing price of a stock using past stock prices and engineered features. The model uses a sliding window of past 30 days to forecast the next closing price. Additional features beyond the raw closing price, such as returns, momentum, moving averages, volatility, momentum, and volume, are included to improve predictive performance.
 
 ## Dataset
 
@@ -59,7 +59,6 @@ The goal is to predict the next day’s closing price of a stock using past stoc
 ### 4. Training
 - Trained for 300 epochs
 - Monitored train loss
-- No separate validation set used in this version
 
 ### 5. Evaluation
 - Predictions scaled back to original price using inverse transform
@@ -73,6 +72,7 @@ The goal is to predict the next day’s closing price of a stock using past stoc
 - Train RMSE: varies depending on stock and hyperparameters
 - Test RMSE: varies depending on stock and hyperparameters
 - Visualization shows model captures general trends but may lag on sharp spikes
+- This shows that LSTMs generally can't predict market crashes or spikes well before they happen
 
 ## Files in This Project
 
@@ -81,7 +81,7 @@ The goal is to predict the next day’s closing price of a stock using past stoc
 
 ## Timeline
 
-9/1/25 - 9/9/25  
+9/3/25 - 9/9/25  
 
 ## Future Improvements
 
@@ -91,4 +91,3 @@ The goal is to predict the next day’s closing price of a stock using past stoc
 - Experiment with sequence length beyond 30 days  
 - Test alternative models (GRU, Transformer-based time series models)  
 - Implement early stopping during training  
-- Deploy model as a dashboard for real-time stock predictions  
